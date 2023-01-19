@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Investigate Chrome Extension",
+    "description": "chrome extension",
+    "version": "1.0",
+    "action": {
+        "default_icon": "assets/purplesquare.png",
+        "default_popup":"popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["popup.js"],
+            "run_at": "document_start",
+            "all_frames": true
+        }
+    ],
+    
+    "permissions": [
+        "activeTab",
+        "contextMenus",
+        "tabs",
+        "scripting"
+    ]
+}
